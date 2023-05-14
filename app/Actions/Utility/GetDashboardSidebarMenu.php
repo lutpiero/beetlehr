@@ -124,10 +124,11 @@ class GetDashboardSidebarMenu
                         'url'  => $getEmployeeSettingMenu->handle()[1]['url'] ?? route('settings.employee.general.index'),
                         'can'  => ['view_employee_general', 'view_employee_designation', 'view_employee_employment_status', 'view_employee_group']
                     ],
-                    // [
-                    //     'text' => 'Overtime',
-                    //     'url'  => route('settings.overtime.rule.index')
-                    // ],
+                    [
+                        'text' => 'Overtime',
+                        'url'  => route('settings.overtime.rule.index'),
+                        'can'  => 'view_overtime_rule'
+                    ],
                     [
                         'text' => 'Approval',
                         'url'  => $getApprovalSettingMenu->handle()[1]['url'] ?? route('settings.approval.rule.index'),

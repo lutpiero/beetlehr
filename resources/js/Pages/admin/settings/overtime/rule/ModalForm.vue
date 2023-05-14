@@ -98,7 +98,7 @@ const updateHandle = async () => {
 </script>
 
 <template>
-    <VDialog :showModal="openDialog" :title="updateAction ? 'Update Leave Type' : 'Add Leave Type'" @opened="openForm" @closed="closeForm" size="md">
+    <VDialog :showModal="openDialog" :title="updateAction ? 'Update Overtime' : 'Add Overtime'" @opened="openForm" @closed="closeForm" size="md">
         <template v-slot:close>
             <button class="text-slate-400 hover:text-slate-500" @click="$emit('close')">
                 <div class="sr-only">Close</div>
