@@ -24,7 +24,7 @@ class LeaveManagementController extends AdminBaseController
     public function leaveGeneralSettingIndex(Request $request)
     {
         return Inertia::render($this->source . 'settings/leave/general/Index', [
-            "title" => 'BattleHR | Setting Leave General',
+            "title" => 'TrustHR | Setting Leave General',
             "additional" => [
                 'menu' => $this->getLeaveSettingMenu->handle(),
                 'data' => $this->leaveGeneralService->getResetLeave(),
@@ -35,7 +35,7 @@ class LeaveManagementController extends AdminBaseController
     public function leaveTypeSettingIndex(Request $request)
     {
         return Inertia::render($this->source . 'settings/leave/type/index', [
-            "title" => 'BattleHR | Setting Leave',
+            "title" => 'TrustHR | Setting Leave',
             "additional" => [
                 'menu' => $this->getLeaveSettingMenu->handle(),
                 'branch_list' => $this->getBranchListOptions->handle(),
@@ -46,7 +46,7 @@ class LeaveManagementController extends AdminBaseController
     public function leaveQuotaSettingIndex(Request $request)
     {
         return Inertia::render($this->source . 'settings/leave/quota/index', [
-            "title" => 'BattleHR | Setting Leave',
+            "title" => 'TrustHR | Setting Leave',
             "additional" => [
                 'menu' => $this->getLeaveSettingMenu->handle(),
                 'branch_list' => $this->getBranchListOptions->handle(),

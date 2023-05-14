@@ -18,7 +18,7 @@ class OvertimeController extends AdminBaseController
     public function ruleSettingIndex(Request $request)
     {
         return Inertia::render($this->source . 'settings/overtime/rule/index', [
-            "title" => 'BattleHR | Setting Overtime',
+            "title" => 'TrustHR | Setting Overtime',
             "additional" => [
                 'menu' => $this->getOvertimeSettingMenu->handle()
             ]

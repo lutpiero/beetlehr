@@ -27,7 +27,7 @@ class AttendanceLogController extends AdminBaseController
         $employee = $this->employeeService->getDetailEmployee($id);
 
         return Inertia::render($this->source . 'employees/employee/attendanceLog/index', [
-            "title" => 'BattleHR | Employee',
+            "title" => 'TrustHR | Employee',
             "additional" => [
                 'menu' => $this->getDetailEmployeeMenu->handle($id),
                 'employee' => $employee

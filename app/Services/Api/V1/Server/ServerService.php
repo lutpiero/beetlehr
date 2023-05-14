@@ -14,22 +14,22 @@ class ServerService
 
         if (isset($companyInformation)) {
             $result = [
-                'name' => $companyInformation->name ?: 'BattleHR',
+                'name' => $companyInformation->name ?: 'TrustHR',
                 'logo' => $companyInformation->logo ? $getFile->handle($companyInformation->logo)->full_path : asset('img/beetlehr-logo.svg'),
                 'address' => $companyInformation->address ?: '-',
                 'email' => $companyInformation->email ?: 'developer@beetlehr.com',
                 'phone_number' => $companyInformation->phone_number ?: '-',
-                'company_name' => $companyInformation->company_name ?: 'BattleHR',
+                'company_name' => $companyInformation->company_name ?: 'TrustHR',
                 'status' => $companyInformation->status ?: 'healthy'
             ];
         } else {
             $result = [
-                'name' => 'BattleHR',
+                'name' => 'TrustHR',
                 'logo' => asset('img/beetlehr-logo.svg'),
                 'address' => '-',
                 'email' => 'developer@beetlehr.com',
                 'phone_number' => '-',
-                'company_name' => 'BattleHR',
+                'company_name' => 'TrustHR',
                 'status' => 'healthy'
             ];
         }

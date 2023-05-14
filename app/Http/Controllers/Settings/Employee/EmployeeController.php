@@ -24,7 +24,7 @@ class EmployeeController extends AdminBaseController
     public function generalSettingIndex()
     {
         return Inertia::render($this->source . 'settings/employee/general/Index', [
-            "title" => 'BattleHR | Setting General Employee',
+            "title" => 'TrustHR | Setting General Employee',
             "additional" => [
                 'menu' => $this->getSettingEmployeeMenu->handle(),
                 'data' => $this->generalEmployeeService->getEditableNip()
@@ -35,7 +35,7 @@ class EmployeeController extends AdminBaseController
     public function designationSettingIndex()
     {
         return Inertia::render($this->source . 'settings/employee/designation/Index', [
-            "title" => 'BattleHR | Setting Designation',
+            "title" => 'TrustHR | Setting Designation',
             "additional" => [
                 'menu' => $this->getSettingEmployeeMenu->handle(),
             ]
@@ -45,7 +45,7 @@ class EmployeeController extends AdminBaseController
     public function employmentStatusSettingIndex()
     {
         return Inertia::render($this->source . 'settings/employee/employmentStatus/Index', [
-            "title" => 'BattleHR | Setting Employment Status',
+            "title" => 'TrustHR | Setting Employment Status',
             "additional" => [
                 'menu' => $this->getSettingEmployeeMenu->handle(),
                 'employment_type_list' => [
@@ -59,7 +59,7 @@ class EmployeeController extends AdminBaseController
     public function employeeGroupSettingIndex()
     {
         return Inertia::render($this->source . 'settings/employee/group/Index', [
-            "title" => 'BattleHR | Setting Employee Group',
+            "title" => 'TrustHR | Setting Employee Group',
             "additional" => [
                 'menu' => $this->getSettingEmployeeMenu->handle(),
                 'branch_list' => $this->getBranch->handle()

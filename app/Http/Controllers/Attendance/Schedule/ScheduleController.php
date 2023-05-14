@@ -45,7 +45,7 @@ class ScheduleController extends AdminBaseController
         }
 
         return Inertia::render($this->source . 'attendance/schedule/Index', [
-            "title" => 'BattleHR | Attendance - Schedule',
+            "title" => 'TrustHR | Attendance - Schedule',
             "additional" => [
                 'branch_list' => $branchOptions,
                 'head' => $head,

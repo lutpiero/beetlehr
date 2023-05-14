@@ -38,7 +38,7 @@ class ResignManagementController extends AdminBaseController
             $employeeOptions[$value->id] = $value->user_detail->name.' - '.$value->branch_detail->name;
         }
 
-        $this->title = "BattleHR | Resign Management";
+        $this->title = "TrustHR | Resign Management";
         $this->path = "employees/resign/index";
         $this->data = [
             'branches_filter' => $branchOptions,

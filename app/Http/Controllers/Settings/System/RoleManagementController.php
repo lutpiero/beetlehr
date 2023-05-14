@@ -33,7 +33,7 @@ class RoleManagementController extends AdminBaseController
     public function createRolePage(Request $request)
     {
         return Inertia::render($this->source . 'settings/systems/role/create', [
-            "title" => 'BattleHR | Setting System Authentication',
+            "title" => 'TrustHR | Setting System Authentication',
             "additional" => [
                 'permission_list' => $this->roleManagementService->getPermissionList()
             ]
@@ -43,7 +43,7 @@ class RoleManagementController extends AdminBaseController
     public function editRolePage($id, Request $request)
     {
         return Inertia::render($this->source . 'settings/systems/role/edit', [
-            "title" => 'BattleHR | Setting System Authentication',
+            "title" => 'TrustHR | Setting System Authentication',
             "additional" => [
                 'permission_list' => $this->roleManagementService->getPermissionList(),
                 'role' => $this->roleManagementService->findRoleById($id),

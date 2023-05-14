@@ -31,7 +31,7 @@ class NoticeBoardController extends AdminBaseController
             $branchOptions[$key] = $value;
         }
 
-        $this->title = "BattleHR | Notice Board";
+        $this->title = "TrustHR | Notice Board";
         $this->path = "noticeboard/index";
         $this->data = [
             'branches_filter' => $branchOptions

@@ -16,7 +16,7 @@ class AttendanceOverviewController extends AdminBaseController
         $this->getBranchOptions = $getBranchOptions;
         $this->attendanceOverviewService = $attendanceOverviewService;
 
-        $this->title = "BattleHR | Attendance";
+        $this->title = "TrustHR | Attendance";
         $this->path = "attendance/attendance/Index";
         $this->data = [
             'branch_list' => $this->getBranchOptions->handle()

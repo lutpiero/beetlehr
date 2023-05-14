@@ -24,7 +24,7 @@ class SystemController extends AdminBaseController
     // public function SystemSettingIndex()
     // {
     //     return Inertia::render($this->source . 'settings/systems/general/Index', [
-    //         "title" => 'BattleHR | Setting System General',
+    //         "title" => 'TrustHR | Setting System General',
     //         "additional" => [
     //             'menu' => $this->getSystemSettingMenu->handle(),
     //             'data' => $this->generalSystemService->getGeneralSystemSettings()
@@ -35,7 +35,7 @@ class SystemController extends AdminBaseController
     public function AuthenticationSettingIndex()
     {
         return Inertia::render($this->source . 'settings/systems/authentication/Index', [
-            "title" => 'BattleHR | Setting System Authentication',
+            "title" => 'TrustHR | Setting System Authentication',
             "additional" => [
                 'menu' => $this->getSystemSettingMenu->handle(),
                 'data' => $this->authenticationService->getData()
@@ -46,7 +46,7 @@ class SystemController extends AdminBaseController
     public function roleSettingIndex()
     {
         return Inertia::render($this->source . 'settings/systems/role/Index', [
-            "title" => 'BattleHR | Setting System Authentication',
+            "title" => 'TrustHR | Setting System Authentication',
             "additional" => [
                 'menu' => $this->getSystemSettingMenu->handle(),
                 'data' => $this->authenticationService->getData()

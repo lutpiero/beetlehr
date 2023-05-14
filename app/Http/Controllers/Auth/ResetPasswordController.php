@@ -35,7 +35,7 @@ class ResetPasswordController extends Controller
         return Inertia::render('admin/auth/change-password', [
             'token' => $token, 
             'email' => $request->email,
-            "title" => 'BattleHr | Change Password'
+            "title" => 'TrustHR | Change Password'
         ]);
     }
 

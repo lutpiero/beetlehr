@@ -62,7 +62,7 @@ class EmployeeController extends AdminBaseController
             $employeeLists[$choose->id] = $choose->user_detail->name . ' - ' . $choose->branch_detail->name;
         }
 
-        $this->title = "BattleHR | Employee";
+        $this->title = "TrustHR | Employee";
         $this->path = "employees/employee/index";
         $this->data = [
             'designation_list' => $this->getDesignationOptions->handle(),
@@ -94,7 +94,7 @@ class EmployeeController extends AdminBaseController
         }
 
         return Inertia::render($this->source . 'employees/employee/detail/index', [
-            "title" => 'BattleHR | Employee',
+            "title" => 'TrustHR | Employee',
             "additional" => [
                 'menu' => $this->getDetailEmployeeMenu->handle($id),
                 'employee' => $employee,

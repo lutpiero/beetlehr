@@ -24,7 +24,7 @@ class AttendanceManagementController extends AdminBaseController
     public function attendanceGeneralSettingIndex()
     {
         return Inertia::render($this->source . 'settings/attendance/general/Index', [
-            "title" => 'BattleHR | Setting General Attendance',
+            "title" => 'TrustHR | Setting General Attendance',
             "additional" => [
                 'menu' => $this->getAttendanceSettingMenu->handle(),
                 'data' => $this->attendanceGeneralService->getCloseBreakup()
@@ -42,7 +42,7 @@ class AttendanceManagementController extends AdminBaseController
             ];
         }
         return Inertia::render($this->source . 'settings/attendance/attendance/Index', [
-            "title" => 'BattleHR | Setting Attendance',
+            "title" => 'TrustHR | Setting Attendance',
             "additional" => [
                 'menu' => $this->getAttendanceSettingMenu->handle(),
                 'data' => $data
@@ -53,7 +53,7 @@ class AttendanceManagementController extends AdminBaseController
     public function holidayCalendarSettingIndex()
     {
         return Inertia::render($this->source . 'settings/attendance/holiday/Index', [
-            "title" => 'BattleHR | Setting Holiday Calendar',
+            "title" => 'TrustHR | Setting Holiday Calendar',
             "additional" => [
                 'menu' => $this->getAttendanceSettingMenu->handle(),
             ]

@@ -34,7 +34,7 @@ class ApprovalController extends AdminBaseController
     public function ruleSettingIndex(Request $request)
     {
         return Inertia::render($this->source . 'settings/approval/rule/index', [
-            "title" => 'BattleHR | Setting Approval',
+            "title" => 'TrustHR | Setting Approval',
             "additional" => [
                 'menu' => $this->getApprovalSettingMenu->handle()
             ]
@@ -44,7 +44,7 @@ class ApprovalController extends AdminBaseController
     public function configRuleIndex($id, Request $request)
     {
         return Inertia::render($this->source . 'settings/approval/rule/config/index', [
-            "title" => 'BattleHR | Setting Approval',
+            "title" => 'TrustHR | Setting Approval',
             "additional" => [
                 'menu' => $this->getApprovalSettingMenu->handle(),
                 'data' => $this->approvalRuleService->getTypeDetail($id)

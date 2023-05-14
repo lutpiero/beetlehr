@@ -32,7 +32,7 @@ class ForgotPasswordController extends Controller
     public function showLinkRequestForm()
     {
         return Inertia::render('admin/auth/reset-password', [
-            "title" => 'BattleHr | Reset Password'
+            "title" => 'TrustHR | Reset Password'
         ]);
     }
 

@@ -30,7 +30,7 @@ class WorkReportController extends AdminBaseController
         }
 
         return Inertia::render($this->source . 'settings/workReport/general/Index', [
-            "title" => 'BattleHR | Setting Work Report',
+            "title" => 'TrustHR | Setting Work Report',
             "additional" => [
                 'menu' => $this->getWorkReportSettingMenu->handle(),
                 'data' => $timeWorkReport

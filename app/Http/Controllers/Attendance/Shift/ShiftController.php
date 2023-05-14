@@ -29,7 +29,7 @@ class ShiftController extends AdminBaseController
             $branchOptions[$key] = $value;
         }
         return Inertia::render($this->source . 'attendance/shift/Index', [
-            "title" => 'BattleHR | Attendance - Shift',
+            "title" => 'TrustHR | Attendance - Shift',
             "additional" => [
                 'branch_list' => $branchOptions
             ]

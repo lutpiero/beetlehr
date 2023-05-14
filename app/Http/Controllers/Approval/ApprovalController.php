@@ -16,7 +16,7 @@ class ApprovalController extends AdminBaseController
     ) {
         $this->approvalService = $approvalService;
         
-        $this->title = "BattleHR | Approval";
+        $this->title = "TrustHR | Approval";
         $this->path = "approval/index";
         $this->data = [];
     }

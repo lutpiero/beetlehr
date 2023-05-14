@@ -39,7 +39,7 @@ class PayrollController extends AdminBaseController
             $branchOptions[$key] = $value;
         }
 
-        $this->title = "BattleHR | Payroll";
+        $this->title = "TrustHR | Payroll";
         $this->path = "payroll/payroll/index";
         $this->data = [
             'branches_list' => $branchOptions
@@ -105,7 +105,7 @@ class PayrollController extends AdminBaseController
     public function payrollEmployee($id, Request $request)
     {
         return Inertia::render($this->source . 'payroll/payroll/payrollemployee/index', [
-            "title" => 'BattleHR | Payroll',
+            "title" => 'TrustHR | Payroll',
             "additional" => [
                 'payroll_slip_id' => $id
             ]
@@ -128,7 +128,7 @@ class PayrollController extends AdminBaseController
     {
         $payrollEmployee = $this->runPayrollService->getPayrollEmployeeDetail($id);
         return Inertia::render($this->source . 'payroll/payroll/payrollemployee/detail', [
-            "title" => 'BattleHR | Payroll',
+            "title" => 'TrustHR | Payroll',
             "additional" => [
                 'payroll_employee' => $payrollEmployee,
                 'payroll_date' => Carbon::parse($payrollEmployee->payroll_slip->date)->format('F Y'),
@@ -148,7 +148,7 @@ class PayrollController extends AdminBaseController
         $payrollComponent = Component::getComponentPayroll($payrollEmployee->employee_detail->branch_id, $payrollEmployee->employee_id);
 
         return Inertia::render($this->source . 'payroll/payroll/payrollemployee/edit', [
-            "title" => 'BattleHR | Payroll',
+            "title" => 'TrustHR | Payroll',
             "additional" => [
                 'payroll_employee' => $payrollEmployee,
                 'payroll_date' => Carbon::parse($payrollEmployee->payroll_slip->date)->format('F Y'),

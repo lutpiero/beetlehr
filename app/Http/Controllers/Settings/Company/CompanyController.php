@@ -31,7 +31,7 @@ class CompanyController extends AdminBaseController
     {
 
         return Inertia::render($this->source . 'settings/company/profile/index', [
-            "title" => 'BattleHR | Setting Company',
+            "title" => 'TrustHR | Setting Company',
             "additional" => [
                 'menu' => $this->getCompanySettingMenu->handle(),
                 'data' => $this->profileService->getProfileCompany()
@@ -42,7 +42,7 @@ class CompanyController extends AdminBaseController
     public function npwpSettingIndex(Request $request)
     {
         return Inertia::render($this->source . 'settings/company/npwp/index', [
-            "title" => 'BattleHR | Setting Company',
+            "title" => 'TrustHR | Setting Company',
             "additional" => [
                 'menu' => $this->getCompanySettingMenu->handle()
             ]
@@ -52,7 +52,7 @@ class CompanyController extends AdminBaseController
     public function branchSettingIndex(Request $request)
     {
         return Inertia::render($this->source . 'settings/company/branch/index', [
-            "title" => 'BattleHR | Setting Company',
+            "title" => 'TrustHR | Setting Company',
             "additional" => [
                 'menu' => $this->getCompanySettingMenu->handle(),
                 'timezones' => $this->getTimezoneOptions->handle(),
@@ -64,7 +64,7 @@ class CompanyController extends AdminBaseController
     public function bpjsSettingIndex(Request $request)
     {
         return Inertia::render($this->source . 'settings/company/bpjs/index', [
-            "title" => 'BattleHR | Setting Company',
+            "title" => 'TrustHR | Setting Company',
             "additional" => [
                 'menu' => $this->getCompanySettingMenu->handle(),
                 'risk_level' => $this->getBpjstkRiskLevelOptions->handle()

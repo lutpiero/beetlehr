@@ -6,7 +6,7 @@ class HomeController extends AdminBaseController
 {
     function __construct()
     {
-        $this->title = "BattleHR | Dashboard";
+        $this->title = "TrustHR | Dashboard";
         $this->path = "dashboard/index";
     }
 }

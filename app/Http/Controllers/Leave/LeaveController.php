@@ -31,7 +31,7 @@ class LeaveController extends AdminBaseController
             $employeeOptions[$value->id] = $value->user_detail->name . ' - ' . $value->branch_detail->name;
         }
 
-        $this->title = "BattleHR | Leave Management";
+        $this->title = "TrustHR | Leave Management";
         $this->path = "leave/index";
         $this->data = [
             'branches_filter' => $this->getBranchOptions->handle(),

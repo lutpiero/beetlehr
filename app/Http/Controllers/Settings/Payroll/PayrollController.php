@@ -27,7 +27,7 @@ class PayrollController extends AdminBaseController
     public function generalSettingIndex(Request $request)
     {
         return Inertia::render($this->source . 'settings/payroll/general/index', [
-            "title" => 'BattleHR | Setting Payroll',
+            "title" => 'TrustHR | Setting Payroll',
             "additional" => [
                 'menu' => $this->getPayrollSettingMenu->handle(),
                 'data' => $this->generalSettingService->getPayrollSettings()
@@ -38,7 +38,7 @@ class PayrollController extends AdminBaseController
     public function payrollGroupIndex(Request $request)
     {
         return Inertia::render($this->source . 'settings/payroll/group/index', [
-            "title" => 'BattleHR | Setting Payroll',
+            "title" => 'TrustHR | Setting Payroll',
             "additional" => [
                 'menu' => $this->getPayrollSettingMenu->handle()
             ]
@@ -55,7 +55,7 @@ class PayrollController extends AdminBaseController
         }
 
         return Inertia::render($this->source . 'settings/payroll/employeeBaseSalary/index', [
-            "title" => 'BattleHR | Setting Payroll',
+            "title" => 'TrustHR | Setting Payroll',
             "additional" => [
                 'menu' => $this->getPayrollSettingMenu->handle(),
                 'data' => $this->generalSettingService->getPayrollSettings(),
@@ -76,7 +76,7 @@ class PayrollController extends AdminBaseController
         }
 
         return Inertia::render($this->source . 'settings/payroll/payrollComponent/index', [
-            "title" => 'BattleHR | Setting Payroll',
+            "title" => 'TrustHR | Setting Payroll',
             "additional" => [
                 'menu' => $this->getPayrollSettingMenu->handle(),
                 'data' => $this->generalSettingService->getPayrollSettings(),

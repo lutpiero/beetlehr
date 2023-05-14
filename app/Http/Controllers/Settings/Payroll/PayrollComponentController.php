@@ -73,7 +73,7 @@ class PayrollComponentController extends AdminBaseController
     public function setValueComponent($id)
     {
         return Inertia::render($this->source . 'settings/payroll/payrollComponent/setValue', [
-            "title" => 'BattleHR | Setting Payroll',
+            "title" => 'TrustHR | Setting Payroll',
             "additional" => [
                 'menu' => $this->getPayrollSettingMenu->handle(),
                 'data' => $this->payrollComponentService->detailData($id),
