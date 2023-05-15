@@ -127,7 +127,7 @@ class GetDashboardSidebarMenu
                     [
                         'text' => 'Overtime',
                         'url'  => route('settings.overtime.rule.index'),
-                        'can'  => 'view_overtime_rule'
+                        'can'  => ['view_payroll_general', 'view_payroll_employee_base_salaries', 'view_payroll_payroll_components']
                     ],
                     [
                         'text' => 'Approval',

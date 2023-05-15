@@ -245,7 +245,7 @@ class RunPayrollService
             } else {
                 throw new \Exception('Didnt have default UMR. Please set all salaries in employee base salaries');
             }
-
+            
             PayrollEmployeeSlip::create($inputs);
         }
     }
