@@ -32,6 +32,13 @@ Route::prefix('attendance')->name('attendance.')->group(function () {
         Route::get('get-attendance-recap', 'getAttendanceRecap')->name('getdatarecap');
         Route::get('get-attendance-overview', 'getAttendanceOverviewData')->name('getdataoverview');
     });
+    Route::controller(AttendanceImportController::class)->prefix('attendance')->name('attendance-import.')->group(function () {
+        Route::get('/', 'index')->name('index');
+        Route::get('get-attendance-header', 'getAttendanceListDate')->name('getattendanceheader');
+        Route::get('get-data', 'getAttendanceList')->name('getdata');
+        Route::get('get-attendance-recap', 'getAttendanceRecap')->name('getdatarecap');
+        Route::get('get-attendance-overview', 'getAttendanceOverviewData')->name('getdataoverview');
+    });
 });
 
 Route::prefix('attendance')->name('attendance.')->group(function () {
