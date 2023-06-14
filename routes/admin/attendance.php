@@ -3,7 +3,7 @@
 use App\Http\Controllers\Attendance\Schedule\ScheduleController;
 use App\Http\Controllers\Attendance\Shift\ShiftController;
 use App\Http\Controllers\Attendance\Attendance\AttendanceOverviewController;
-use app\Http\Controllers\Attendance\Exim\ImportExportController;
+use App\Http\Controllers\Attendance\Exim\ImportExportController;
 
 
 /*
@@ -33,7 +33,7 @@ Route::prefix('attendance')->name('attendance.')->group(function () {
         Route::get('get-attendance-recap', 'getAttendanceRecap')->name('getdatarecap');
         Route::get('get-attendance-overview', 'getAttendanceOverviewData')->name('getdataoverview');
     });
-    Route::controller(ImportExportController::class)->prefix('import')->name('import.')->group(function () {
+    Route::controller(ImportExportController::class)->prefix('exim')->name('exim.')->group(function () {
         Route::get('/', 'index')->name('index');
         Route::get('get-attendance-header', 'getAttendanceListDate')->name('getattendanceheader');
         Route::get('get-data', 'getAttendanceList')->name('getdata');

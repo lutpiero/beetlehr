@@ -71,7 +71,7 @@ class GetDashboardSidebarMenu
                     ],
                     [
                         'text' => 'Import From XLS',
-                        'url'  => route('attendance.import.index'),
+                        'url'  => route('attendance.exim.index'),
                         'can'  => 'view_employee_management_attendance'
                     ]
                 ]
