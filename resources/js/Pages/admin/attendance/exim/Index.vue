@@ -46,7 +46,7 @@ const breadcrumb = [
     {
         name: "Import",
         active: true,
-        to: route('attendance.attendance-import.index')
+        to: route('attendance.import.index')
     },
 ]
 const overviewLoading = ref(true)
