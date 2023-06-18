@@ -24,7 +24,7 @@ import VLeave from '@/components/src/icons/solid/VLeave.vue';
 import VEmpty from '@/components/src/icons/VEmpty.vue';
 import VHoliday from '@/components/src/icons/solid/VHoliday.vue';
 import VUnassign from '@/components/src/icons/solid/VUnassign.vue';
-import VModalForm from './ModalForm.vue'
+//import VModalForm from './ModalForm.vue'
 
 const itemSelected = ref({})
 const openModalForm = ref(false)
@@ -46,7 +46,7 @@ const breadcrumb = [
     {
         name: "Import",
         active: true,
-        to: route('attendance.import.index')
+        to: route('attendance.exim.index')
     },
 ]
 const overviewLoading = ref(true)
@@ -219,43 +219,15 @@ onMounted(() => {
         <h1 class="text-2xl md:text-3xl text-slate-800 font-bold">Import Attendance</h1>
         <VSelect placeholder="Select Branch" v-model="filterBranchValue" :options="additional.branch_list" class="w-1/6" :clearable="false" @update:modelValue="filterBranch" />
     </div>
-
+    <div class="grid grid-cols-2 gap-3">
+        <div class="col-span-2">
+            <VInput placeholder="Input Shift Name" label="Name" :required="true"  />
+            <VInput placeholder="Input Shift Type" label="Shift Type" :required="true"/>
+	    <input type="file" name="import"/>
+	    <input type="submit" name="submit" />
+     	</div>
+    </div>
     <!-- Attendance Overview -->
-    <div class="bg-white shadow-lg rounded-md mb-8 p-4">
-        <div class="mb-5 flex justify-between items-center">
-            <h1 class="text-xl text-slate-800 font-semibold">Attendance Import</h1>
-            <div class="inline-flex space-x-2">
-                <!-- <VButton label="Export" type="outline-primary" class="my-auto" /> -->
-                <Datepicker v-model="filter.month" @update:modelValue="handleDate" month-picker :enableTimePicker="false" position="left"
-                    :clearable="false" format="MMMM yyyy" previewFormat="MMMM yyyy" placeholder="Select Active Month"/>
-            </div>
-        </div>
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-6 gap-6">
-            <div class="rounded border py-4 pr-4 flex" v-for="(data, index) in attendanceOverview" :key="index">
-                <div class="w-1.5 rounded-r mr-4" :class="{
-                    'bg-blue-500': data.type === 'present',
-                    'bg-red-500': data.type === 'absent',
-                    'bg-amber-500': data.type === 'late',
-                    'bg-cyan-600': data.type === 'clockout_early',
-                    'bg-pink-500': data.type === 'leave',
-                    'bg-yellow-400': data.type === 'holiday'
-                }"></div>
-                <div class="text-slate-800">
-                    <div class="font-medium text-base">
-                        {{ data.label }}
-                    </div>
-                    <div v-if="overviewLoading" class="mt-1">
-                        <VLoading />
-                    </div>
-                    <div v-else>
-                        <div class="font-semibold text-3xl">
-                            {{ data.value }}
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>       
 </template>
 
 <style scoped>
